@@ -1,11 +1,7 @@
-var request = new XMLHttpRequest();
- 
-request.open('GET', 'https://api.excelapi.org/wikipedia/summary2?word=あ', true);
-request.responseType = 'json';
-
-request.onload = function () {
-  var data = this.response;
+function handleResponse(data) {
   console.log(data);
-};
+}
 
-request.send();
+var script = document.createElement('script');
+script.src = 'https://api.excelapi.org/wikipedia/summary2?word=あ';
+document.body.appendChild(script);
